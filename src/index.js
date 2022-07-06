@@ -11,7 +11,7 @@ require('./database');
 require('./config/passport');
 
 //configuraciones
-app.set('port', process.env.PORT || 3000); // asignando puertos
+app.set('port', process.env.PORT || 8000); // asignando puertos
 
 app.set('views', path.join(__dirname, 'views')); //avisarle la ruta de direccion de la carpeta views
 
