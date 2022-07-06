@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+    <div class="container">
+      <a class="navbar-brand" href="/">Torneo de Artes Marciales</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/about">Acerca del proyecto</a>
+        </li>
+        
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        {{#if user}}
+          {{#if cantidad}}
+          <li class="nav-link">Cantidad de inscritos: {{cantidad}}</li>
+          {{/if}}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Participantes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/participantes">Todos los participantes</a>
+              <a class="dropdown-item" href="/participantes/add">Agregar participante</a>
+              <a class="dropdown-item" href="/participantes/participantespais">Ordenar participantes alfabeticamente por país</a>
+              <a class="dropdown-item" href="/participantes/paises">Ver países de los participantes</a>
+              <a class="dropdown-item" href="/participantes/artesmarciales">Ver las artes marciales inscritas</a>
+              <a class="dropdown-item" href="/participantes/sub23">Participantes Categoría Sub-23 (Hasta 23 años)</a>
+              <a class="dropdown-item" href="/participantes/adultos">Participantes Categoría Adultos (Entre 24 y 29 años)</a>
+              <a class="dropdown-item" href="/participantes/senior">Participantes Categoría Senior (Desde los 30 años)</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/logout">Logout</a>
+            </ul>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signin">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signup">Register</a>
+          </li>
+        {{/if}}
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- 
+
+    <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="logo" class="rounded-circle mx-auto d-block m-4 logo" id="imgnav"></a>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Participantes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Todos los participantes</a></li>
+                <li><a class="dropdown-item" href="#">Agregar Participantes</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </li>
+
+    <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled">Disabled</a>
+
+-->
